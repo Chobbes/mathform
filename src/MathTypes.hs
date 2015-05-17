@@ -37,3 +37,4 @@ data MathForm = Mult MathForm MathForm
               | Negative MathForm MathForm
               | Vector [MathForm]
               | Matrix [[MathForm]]
+              | Generic String  -- ^ Identifiers, numbers, etc...
