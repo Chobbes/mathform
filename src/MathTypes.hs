@@ -21,7 +21,7 @@
    SOFTWARE.
 -}
 
-module MathTypes where
+module Text.MathForm.MathTypes where
 
 
 -- | Main datatype for keeping track of mathematical expressions.
