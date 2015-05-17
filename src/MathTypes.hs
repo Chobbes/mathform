@@ -27,6 +27,10 @@ module MathTypes where
 -- | Main datatype for keeping track of mathematical expressions.
 data MathForm = Mult MathForm MathForm
               | Div MathForm MathForm
+              | Frac MathForm MathForm
+              | Pow MathForm MathForm
+              | Sqrt MathForm
+              | Root MathForm MathForm
               | Add MathForm MathForm
               | Sub MathForm MathForm
               | Paren MathForm MathForm
