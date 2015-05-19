@@ -26,7 +26,9 @@ module Text.MathForm.Writers.LaTeX where
 import Text.MathForm.MathTypes
 
 writeLaTeX :: MathForm -> String
-writeLaTeX (Generic str) = str
+writeLaTeX (Symbol str) = str
+writeLaTeX (IntLit int) = show int
+writeLaTeX (FloatLit float) = show float
 writeLaTeX (Paren a) = "(" ++ writeLaTeX a ++ ")"
 writeLaTeX (Mult a b) = (writeLaTeX a) ++ " \cdot " ++ (writeLaTeX b)
 writeLaTeX (Div a b) = (writeLaTeX a) ++ " / " ++ (writeLaTeX b)
