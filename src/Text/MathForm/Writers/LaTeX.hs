@@ -21,7 +21,7 @@
    SOFTWARE.
 -}
 
-module Text.MathForm.Writers.LaTeX where
+module Text.MathForm.Writers.LaTeX (writeLaTeX) where
 
 import Text.MathForm.MathTypes
 
@@ -30,12 +30,12 @@ writeLaTeX (Symbol str) = str
 writeLaTeX (IntLit int) = show int
 writeLaTeX (FloatLit float) = show float
 writeLaTeX (Paren a) = "(" ++ writeLaTeX a ++ ")"
-writeLaTeX (Mult a b) = (writeLaTeX a) ++ " \cdot " ++ (writeLaTeX b)
+writeLaTeX (Mult a b) = (writeLaTeX a) ++ " \\cdot " ++ (writeLaTeX b)
 writeLaTeX (Div a b) = (writeLaTeX a) ++ " / " ++ (writeLaTeX b)
-writeLaTeX (Frac a b) = "\frac{" ++ (writeLaTeX a) "}" ++ "{" ++ (writeLaTeX b) ++ "}"
+writeLaTeX (Frac a b) = "\\frac{" ++ (writeLaTeX a) ++ "}" ++ "{" ++ (writeLaTeX b) ++ "}"
 writeLaTeX (Pow a b) = "{" ++ (writeLaTeX a) ++ "}^{" ++ (writeLaTeX b) ++ "}"
-writeLaTeX (Sqrt a) = "\sqrt{" ++ (writeLaTeX a) ++ "}"
-writeLaTeX (Root a b) = "\sqrt[" ++ (writeLaTeX a) ++ "]{" ++ (writeLaTeX b) ++ "}"
+writeLaTeX (Sqrt a) = "\\sqrt{" ++ (writeLaTeX a) ++ "}"
+writeLaTeX (Root a b) = "\\sqrt[" ++ (writeLaTeX a) ++ "]{" ++ (writeLaTeX b) ++ "}"
 writeLaTeX (Add a b) = (writeLaTeX a) ++ " + " ++ (writeLaTeX b)
 writeLaTeX (Sub a b) = (writeLaTeX a) ++ " - " ++ (writeLaTeX b)
-writeLaTeX (Negative a) = " -" ++ (writeLaTeX a)
+writeLaTeX (Negative a) = "-" ++ (writeLaTeX a)
