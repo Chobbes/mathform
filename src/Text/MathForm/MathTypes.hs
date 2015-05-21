@@ -33,10 +33,11 @@ data MathForm = Mult MathForm MathForm
               | Root MathForm MathForm
               | Add MathForm MathForm
               | Sub MathForm MathForm
-              | Paren MathForm MathForm
-              | Negative MathForm MathForm
+              | Paren MathForm
+              | Negative MathForm
               | Vector [MathForm]
               | Matrix [[MathForm]]
               | Symbol String  -- ^ Identifiers for variables.
               | IntLit Integer
               | FloatLit Double
+              deriving (Show)
