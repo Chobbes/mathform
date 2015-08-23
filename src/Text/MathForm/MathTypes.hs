@@ -40,10 +40,11 @@ data MathForm = Mult MathForm MathForm
               | Pow MathForm MathForm
               | Sqrt MathForm
               | Root MathForm MathForm
-              | Add MathForm MathForm
+              | Plus MathForm MathForm
               | Sub MathForm MathForm
               | Paren MathForm
-              | Negative MathForm
+              | Neg MathForm
+              | Pos MathForm
               | Vector [MathForm]
               | Matrix [[MathForm]]
               | Symbol String  -- ^ Identifiers for variables.
