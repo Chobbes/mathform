@@ -21,8 +21,17 @@
    SOFTWARE.
 -}
 
+{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE GADTs #-}
+
 module Text.MathForm.MathTypes where
 
+type family Eval a b
+type instance Eval Double Integer = Double
+type instance Eval Double Double = Double
+type instance Eval Integer Double = Double
+-- type instance Eval String _ = String
+-- type instance Eval _ String = String
 
 -- | Main datatype for keeping track of mathematical expressions.
 data MathForm = Mult MathForm MathForm
