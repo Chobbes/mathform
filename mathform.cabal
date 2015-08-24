@@ -24,7 +24,7 @@ Library
                        text >= 1.1 && < 1.3
   hs-source-dirs:      src
   exposed-modules:     Text.MathForm.Readers.Sage,
-                       Text.MathForm.Readers.LaTeX
+                       Text.MathForm.Readers.Auto
                        Text.MathForm.Writers.LaTeX
   default-extensions:  PolymorphicComponents
   default-language:    Haskell2010
