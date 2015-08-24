@@ -33,5 +33,7 @@ import Text.Parsec.Text
 -- | Try a collection of all MathForm parsers. This can be used to
 -- automatically detect what language the expression is from, but
 -- it may use an incorrect parser.
+--
+-- This can only be used with simple Parsec parsers as well.
 parseAuto :: Parser MathForm
 parseAuto = choice [parseSage]
